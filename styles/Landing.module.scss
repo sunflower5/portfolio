@@ -1,0 +1,154 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.landing {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  background-color: #fefdfe;
+  border-top: 6px solid #32a49a;
+  border-bottom: 6px solid #32a49a;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("../public/landing-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hello {
+  height: 50%;
+  min-height: 400px;
+  flex: 1 1 50%;
+  font-family: "Squada One", cursive;
+  color: white;
+  font-size: 44px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.helloName {
+  max-width: 280px;
+}
+
+.wavingHand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.imgLogo {
+  height: 50%;
+  max-height: 485px;
+  flex: 1 1 50%;
+  text-align: center;
+
+  display: flex;
+}
+.imgLogo img {
+  height: 100%;
+  width: 100%;
+}
+
+.developer {
+  height: 50%;
+  flex: 1 1 50%;
+  text-align: center;
+  font-family: "Squada One", cursive;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.devDesc {
+  max-width: 280px;
+}
+
+.empty {
+  height: 50%;
+  flex: 0 1 50%;
+}
+
+@media (max-width: 1000px) {
+  .row {
+    background-image: url("../public/landing-bg-mobile.png");
+  }
+
+  .landing {
+    height: 960px;
+  }
+
+  .hello {
+    order: 2;
+    height: auto;
+    min-height: 0;
+    flex: 1 0 100%;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .imgLogo {
+    order: 1;
+    max-width: 480px;
+    flex: 1 0 100%;
+    align-content: flex-start;
+  }
+
+  .developer {
+    order: 3;
+    height: auto;
+    flex: 1 0 100%;
+    min-height: 0;
+  }
+  .empty {
+    order: 4;
+    height: 25%;
+    flex: 1 0 100%;
+  }
+}

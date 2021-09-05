@@ -1,0 +1,125 @@
+.aboutContainer {
+  height: 100%;
+  width: 100%;
+  background: #f2f4f9;
+
+  .aboutWrapper {
+    background-image: url("../public/about-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    max-width: 1920px;
+
+    width: 100%;
+    margin: 0 auto;
+
+    padding-top: 40px;
+
+    .aboutTitle {
+      display: flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        flex-basis: 100%;
+        padding: 3rem 0 1.3rem 0;
+      }
+
+      .aboutDesc {
+        flex-basis: 100%;
+        max-width: 75ch;
+        text-align: center;
+        font-family: "Urbanist", sans-serif;
+        line-height: 1.5;
+        font-size: 1.2rem;
+      }
+    }
+
+    .aboutSkills {
+      display: flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .skillsTitle {
+        width: 100%;
+
+        h1 {
+          font-family: "Roboto", sans-serif;
+          font-size: 2rem;
+          color: rgba(0, 0, 0, 0.8);
+          text-align: center;
+          padding: 3rem 0 1.3rem 0;
+        }
+      }
+
+      .skillsContainer {
+        display: flex;
+        flex: 1 0 300px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        max-width: 650px;
+
+        .skillsColumn {
+          font-family: "Urbanist", sans-serif;
+          line-height: 1.6;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.8);
+          z-index: 1;
+          position: relative;
+          flex: 0 0 250px;
+          overflow: hidden;
+          background: rgba(126, 153, 165, 0.76);
+          border: 10px dashed #445f6b;
+          border-radius: 0.5rem;
+
+          .skillsBG {
+            padding: 20px 0;
+            height: 100%;
+            width: 100%;
+            background: #fff;
+            text-align: center;
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            position: relative;
+            top: 5px;
+            left: 5px;
+            border-radius: 0.5rem;
+
+            .skillsImgContainer {
+              .skillsImg {
+                width: 100%;
+                display: block;
+                max-width: 80px;
+                margin: 0 auto;
+              }
+            }
+
+            .skillsList {
+              padding: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .aboutContainer {
+    .aboutWrapper {
+      .aboutTitle {
+        .aboutDesc {
+          padding: 0 25px;
+        }
+      }
+    }
+  }
+}
